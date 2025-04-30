@@ -117,7 +117,7 @@ default allow = false
 allow {
     input.method = "GET"
     input.path = [ "service-a", "data" ]
-    input.user == "alice@example.com"
+    input.user == "adityasri3129@gmail.com"
 }
 ```
 
