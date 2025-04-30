@@ -1,6 +1,6 @@
 # Zero Trust Authentication using Kubernetes, Istio, Keycloak, and OPA
 
-## 🔒 Overview
+## Overview
 
 This project demonstrates a practical implementation of **Zero Trust Architecture (ZTA)** in a cloud-native environment using:
 
@@ -13,18 +13,18 @@ It showcases how to secure inter-service communication, authenticate users, and 
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ Kubernetes-based microservices architecture
-- 🔐 Mutual TLS between services using Istio
-- 👤 User authentication with Keycloak via OpenID Connect (OIDC)
-- 📜 Policy-based authorization with OPA (Rego policies)
-- 🔄 Centralized identity and access management
-- 📦 Easily deployable using `kubectl`, `istioctl`, and `helm`
+-  Kubernetes-based microservices architecture
+-  Mutual TLS between services using Istio
+-  User authentication with Keycloak via OpenID Connect (OIDC)
+-  Policy-based authorization with OPA (Rego policies)
+-  Centralized identity and access management
+-  Easily deployable using `kubectl`, `istioctl`, and `helm`
 
 ---
 
-## 🧱 Architecture
+##  Architecture
 
 ```
 [ User ] --> [ Istio Ingress Gateway ] --> [ Service A ] <--> [ Service B ]
@@ -35,7 +35,7 @@ It showcases how to secure inter-service communication, authenticate users, and 
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Technologies Used
 
 - **Kubernetes** (v1.28+)
 - **Istio** (v1.20+)
@@ -45,7 +45,7 @@ It showcases how to secure inter-service communication, authenticate users, and 
 
 ---
 
-## 🧪 Project Setup
+##  Project Setup
 
 ### 1. Prerequisites
 
@@ -99,7 +99,7 @@ Deploy a couple of simple services (e.g., `httpbin` or custom app) with sidecars
 
 ---
 
-## 🔐 Keycloak Configuration
+##  Keycloak Configuration
 
 - Create a realm and client for your service
 - Enable OIDC and generate client credentials
@@ -107,7 +107,7 @@ Deploy a couple of simple services (e.g., `httpbin` or custom app) with sidecars
 
 ---
 
-## 📄 Example Policy (OPA)
+##  Example Policy (OPA)
 
 ```rego
 package http.authz
@@ -123,7 +123,7 @@ allow {
 
 ---
 
-## 📊 Use Cases
+##  Use Cases
 
 - Cloud-native application security
 - Secure microservice-to-microservice communication
@@ -131,7 +131,7 @@ allow {
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
 - Add support for fine-grained RBAC via Keycloak roles
 - Automate setup using Helm charts or Skaffold
@@ -139,7 +139,7 @@ allow {
 
 ---
 
-## 🧑‍💻 Author
+##  Author
 Ajmeera Srikanth  
 IITR  
 Project for academic submission on **Zero Trust Security in Kubernetes**
