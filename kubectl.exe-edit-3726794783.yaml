@@ -1,0 +1,33 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"keycloak","namespace":"default"},"spec":{"ports":[{"port":8080,"protocol":"TCP","targetPort":8080}],"selector":{"app":"keycloak"}}}
+  creationTimestamp: "2025-04-22T17:54:40Z"
+  name: keycloak
+  namespace: default
+  resourceVersion: "2236"
+  uid: f0790fd8-d347-410c-95d0-5dd1641e3b7d
+spec:
+  clusterIP: 10.105.8.82
+  clusterIPs:
+  - 10.105.8.82
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: keycloak
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

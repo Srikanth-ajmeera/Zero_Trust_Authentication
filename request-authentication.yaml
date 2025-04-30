@@ -1,0 +1,12 @@
+apiVersion: security.istio.io/v1beta1
+kind: RequestAuthentication
+metadata:
+  name: keycloak-auth
+  namespace: demo
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  jwtRules:
+  - issuer: "http://localhost:8180/realms/zerotrust"
+    jwksUri: "http://localhost:8180/realms/zerotrust/protocol/openid-connect/certs"

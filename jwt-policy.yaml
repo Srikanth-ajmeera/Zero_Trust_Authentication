@@ -1,0 +1,12 @@
+apiVersion: security.istio.io/v1beta1
+kind: RequestAuthentication
+metadata:
+  name: productpage-jwt
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: productpage
+  jwtRules:
+  - issuer: "http://172.25.168.162:30080/realms/istio-demo"
+    jwksUri: "http://172.25.168.162:30080/realms/istio-demo/protocol/openid-connect/certs"
